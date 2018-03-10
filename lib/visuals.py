@@ -78,7 +78,7 @@ class Clusters:
             print("For n_clusters = {} the silhouette score is {}.".format(n, self.silhouette_scores[n]))
             
     def _cluster_plot(self, n, ax, dim_1, dim_2, samples=None):
-        colors = cm.spectral(self.cluster_labels[n].astype(float)/n)
+        colors = cm.jet(self.cluster_labels[n].astype(float)/n)
         x_dim = 'Dimension {}'.format(dim_1)
         y_dim = 'Dimension {}'.format(dim_2)
         ax.scatter(self.dataframe[x_dim], self.dataframe[y_dim], 
@@ -113,7 +113,7 @@ class Clusters:
             size_cluster_i = ith_cluster_silhouette_values.shape[0]
             y_upper = y_lower + size_cluster_i
 
-            color = cm.spectral(float(i) / n)
+            color = cm.jet(float(i) / n)
             ax.fill_betweenx(np.arange(y_lower, y_upper),
                               0, ith_cluster_silhouette_values,
                               facecolor=color, edgecolor=color, alpha=0.7)
