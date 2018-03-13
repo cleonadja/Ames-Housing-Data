@@ -47,7 +47,7 @@ class FeatureLoadingsPlot:
 
     def display_segments(self):
         n = len(self.dimension_names)
-        self.pca_components_df.plot(figsize = (20,6), kind = 'bar')
+        self.pca_components_df.plot(figsize = (20,6), kind = 'bar', cmap=cm.jet)
         self._display_explained_variance_ratios()
         plt.legend(loc=1)
         plt.suptitle("Feature Loadings")
