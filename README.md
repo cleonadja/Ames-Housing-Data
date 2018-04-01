@@ -17,10 +17,10 @@ The data set contains 1460 observations and 79 explanatory variables (56 categor
 The dataset has 1460 rows and 80 columns and uses up 608K GB in memory.
 
 ## Solution Statement
-A solution to this problem will be a regression model such as a logistic regression, decision tree, random forest, gradient-boosted tree, multilayer perceptron, one-vs-rest.
+A solution to this problem will be a regression model such as a linear regression, Lasso, Ridge, or a SVR.
 
 ## Benchmark Model
-Given that we seek a regression model a good naive benchmark would be to guess the most common class or the mean value.
+Given that we seek a regression model a good naive benchmark would be to guess the mean value.
 
 ## Evaluation Metrics
 The dataset is not evenly distributed as most median values of the home are between 100k-200k. We can use the success of the model measuring against the MSE and determine if our model predicts the correct median value of the home more reliably than the MSE or R^2.
